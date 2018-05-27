@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Parallax</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		.bgi {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+		}
+
+		.section-01 .bgi{
+			background-image: url('./images/bcg_slide-1.jpg');
+		}
+		.section-02 .bgi{
+			background-image: url('./images/bcg_slide-2.jpg');
+		}
+		.section-03 .bgi{
+			background-image: url('./images/bcg_slide-3.jpg');
+		}
+		.section-04 .bgi{
+			background-image: url('./images/bcg_slide-4.jpg');
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="section-01">
+		<div class="bgi"></div>
+	</div>
+	<div class="section-02">
+		<div class="bgi"></div>
+	</div>
+	<div class="section-03">
+		<div class="bgi"></div>
+	</div>
+	<div class="section-04">
+		<div class="bgi"></div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		function adjustView(){
+			$('.bgi').height($(window).height());	
+		}
+
+		$(window).bind('load', adjustView);
+		$(window).bind('resize', adjustView);
+		
+	</script>
+
+</body>
+</html>
